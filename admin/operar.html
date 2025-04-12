@@ -18,109 +18,80 @@
 
       <div class="sidebar" id="sidebar">
         <div class="logo">
-          <img
-            src="/imagenes/logo-grande.png"
-            alt="Logo Grande"
-            class="logo-expandido"
-          />
-          <img
-            src="/imagenes/logo-mini.png"
-            alt="Logo Miniatura"
-            class="logo-compacto"
-          />
+        <img src="/imagenes/logo-grande.png" alt="Logo Grande" class="logo-expandido" />
+        <img src="/imagenes/logo-mini.png" alt="Logo Miniatura" class="logo-compacto" />
         </div>
+        
         <ul>
+        <li>
+        <a href="index.html"><i class="fas fa-home"></i><span class="menu-text">Inicio</span></a>
+        </li>
+        
+        <li class="submenu">
+          <a href="#"><i class="fa-solid fa-users-line"></i>
+          <span class="menu-text"> Gestionar Usuarios</span></a>
+          <ul>
           <li>
-            <a href="index.html"
-              ><i class="fas fa-home"></i
-              ><span class="menu-text">Inicio</span></a
-            >
+          <a href="usuarios.html"><i class="fa-solid fa-users"></i><span class="menu-text">Usuarios</span></a>
           </li>
-
-          <li class="submenu">
-            <a href="#"
-              ><i class="fa-solid fa-list-check"></i>
-              <span class="menu-text">Parqueaderos</span></a
-            >
-            <ul>
-              <li>
-                <a href="historico.html"
-                  ><i class="fa-solid fa-book-open"></i
-                  ><span class="menu-text">Historico</span></a
-                >
-              </li>
-
-              <li>
-                <a href="historico.html"
-                  ><i class="fa-solid fa-book-open"></i
-                  ><span class="menu-text">Historico</span></a
-                >
-              </li>
-            </ul>
-          </li>
-
-          <li class="submenu">
-            <a href="#"
-              ><i class="fa-solid fa-list-check"></i>
-              <span class="menu-text">Gestionar</span></a
-            >
-            <ul>
-              <li>
-                <a href="historico.html"
-                  ><i class="fa-solid fa-book-open"></i
-                  ><span class="menu-text">Historico</span></a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fa-solid fa-calendar-days"></i
-                  ><span class="menu-text">Turnos del Operador</span></a
-                >
-              </li>
-            </ul>
-          </li>
-
-          <li class="submenu">
-            <a href="#"
-              ><i class="fa-solid fa-user-tie"></i
-              ><span class="menu-text">Administrar</span></a
-            >
-            <ul>
-              <li>
-                <a href="crear_zonas.html"
-                  ><i class="fa-solid fa-square-parking"></i
-                  ><span class="menu-text">Crear Parqueaderos</span></a
-                >
-              </li>
-              <li>
-                <a href="crear_celdas.html"
-                  ><i class="fa-solid fa-expand"></i
-                  ><span class="menu-text">Crear Zonas</span></a
-                >
-              </li>
-              <li>
-                <a href="crear_usuarios.html"
-                  ><i class="fa-solid fa-user-tie"></i
-                  ><span class="menu-text">Usuarios del sistema </span></a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fa-solid fa-gear"></i
-                  ><span class="menu-text">Configuracion</span></a
-                >
-              </li>
-            </ul>
-          </li>
-
+          
           <li>
-            <a href="#"
-              ><i class="fa-solid fa-headset"></i
-              ><span class="menu-text">Soporte</span></a
-            >
+          <a href="crear_parqueadero.html"><i class="fa-solid fa-square-parking"></i><span class="menu-text">Crear
+          Parqueadero</span></a>
+           </li>
+          
+        
+          </ul>
           </li>
+        
+        <li class="submenu">
+        <a href="#"><i class="fa-solid fa-list-check"></i>
+        <span class="menu-text"> Gestionar Parqueaderos</span></a>
+        <ul>
+        <li>
+        <a href="vehiculos.html"><i class="fa-solid fa-car"></i><span class="menu-text">Vehiculos</span></a>
+        </li>
+        
+        <li>
+        <a href="crear_parqueadero.html"><i class="fa-solid fa-square-parking"></i><span class="menu-text">Crear
+        Parqueadero</span></a>
+         </li>
+        
+        <li><a href="crear_zonas.html"><i class="fa-solid fa-expand"></i><span class="menu-text">Crear
+        Zonas</span></a></li>
+        
+        <li><a href="historico.html"><i class="fa-solid fa-book-open"></i><span class="menu-text">Historico</span></a>
+        </li>
+        
         </ul>
-      </div>
+        </li>
+        
+        
+        <li class="submenu">
+        <a href="#"><i class="fa-solid fa-person-military-pointing"></i>
+        <span class="menu-text">Operadores</span></a>
+        <ul>
+                   
+        <li><a href="#"><i class="fa-solid fa-calendar-days"></i><span class="menu-text">Gestionar Turnos</span></a>
+        </li>
+        </ul>
+        </li>
+        
+        <li class="submenu">
+        <a href="#"><i class="fa-solid fa-user-tie"></i><span class="menu-text">Administrar</span></a>
+        <ul>
+                  
+        <li><a href="crear_usuarios.html"><i class="fa-solid fa-user-tie"></i><span class="menu-text">Usuarios del
+        sistema </span></a>
+        </li>
+        <li><a href="#"><i class="fa-solid fa-gear"></i><span class="menu-text">Configuracion</span></a></li>
+        </ul>
+        </li>
+        
+        <li><a href="#"><i class="fa-solid fa-headset"></i><span class="menu-text">Soporte</span></a></li>
+        </ul>
+        </div><!-- Fin del sidebar -->
+
 
       <nav class="navbar">
         <ul class="navbar-menu">
