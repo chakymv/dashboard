@@ -13,7 +13,8 @@
 
 <body>
 <header>
-<div class="sidebar" id="sidebar">
+
+<div class="sidebar" id="sidebar"><!-- Inicia el sidebar menu -->
 <div class="logo">
 <img src="/imagenes/logo-grande.png" alt="Logo Grande" class="logo-expandido" />
 <img src="/imagenes/logo-mini.png" alt="Logo Miniatura" class="logo-compacto" />
@@ -87,9 +88,9 @@ sistema </span></a>
 
 <li><a href="#"><i class="fa-solid fa-headset"></i><span class="menu-text">Soporte</span></a></li>
 </ul>
-</div>
+</div><!-- Finaliza el sidebar menu -->
 
-    <nav class="navbar">
+    <nav class="navbar"><!-- Inicia el navbar -->
       <ul class="navbar-menu">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle">Servicios</a>
@@ -99,12 +100,16 @@ sistema </span></a>
         </li>
         <li><a href="#">Cerrar Sesion</a></li>
       </ul>
-    </nav>
+    </nav><!-- Finaliza el navbar -->
   </header>
 
   <main>
  
-    <div class="contenido-principal">  
+    <div class="contenido-principal"><!-- Inicia el contenido principal -->
+      <div class="encabezado-principal">
+        <h1>Bienvenido Administrador</h1>
+        <p>Gestiona el parqueadero de manera eficiente</p>
+      </div>  
     <div class="contadores">
       <div class="columnas">
         <div class="contenedor-grafico">
@@ -466,25 +471,26 @@ sistema </span></a>
           </button>
         </div>
       </div>
-    </div>
-    <!-- Aca termina el modal-->
+    </div> <!-- Aca termina el modal-->
 
-    </div>
+    </div><!-- Finaliza el contenido principal -->
 
   </main><!-- Finaliza el main -->
 
-  <script>
+  
+  <script>/*Se inicia el script del sidebar menu que permite hacerle cambios a las propiedades del css al contenido 
+  al pasar el cursor sobre el y al salir del area del sidebar*/
     const sidebar = document.getElementById("sidebar");
    const contenidoPrincipal = document.querySelector(".contenido-principal");
    
    sidebar.addEventListener("mouseenter", () => {
        sidebar.classList.add("expanded");
-       contenidoPrincipal.style.marginLeft = "250px"; 
+       contenidoPrincipal.style.marginLeft = "250px"; /*Al expandir va a restar 250px a la izquierda*/
    });
    
    sidebar.addEventListener("mouseleave", () => {
        sidebar.classList.remove("expanded");
-       contenidoPrincipal.style.marginLeft = "50px"; 
+       contenidoPrincipal.style.marginLeft = "50px"; /*Al salir del area del sidebar a restar 200px y dejar solo 50px*/
    });
       
    </script>
@@ -512,7 +518,7 @@ sistema </span></a>
           content.style.display === "block" ? "none" : "block";
       });
     });
-
+/*Si el % llega  a estos limites ira cambiando de color en estos % de ancho dados*/
     document.querySelectorAll(".barra-progreso-interna").forEach((bar) => {
       const width = parseInt(bar.style.width);
       if (width <= 25) {
@@ -525,31 +531,31 @@ sistema </span></a>
     });
   </script>
 
-  <script>
+  <script>/*Para este se uso la libraria chart.js*/
     const ctx = document.getElementById("graficoCircular").getContext("2d");
     const ctx2 = document.getElementById("graficoIncidencias").getContext("2d");
     const ctx3 = document.getElementById("GraficoTotalVehiculos").getContext("2d");
 
     const data2 = {
-      labels: ["Con incidencias", "Sin incidencias"],
+      labels: ["Con incidencias", "Sin incidencias"],/*Un texto para mostrar en las graficas*/
       datasets: [
         {
-          label: "Incidencias",
-          data: [2, 15],
-          backgroundColor: ["#ff0000", "#F4C79A",],
-          hoverOffset: 4,
+          label: "Incidencias",/*Un texto para mostrar en las graficas*/
+          data: [2, 15],/*Aca se le da el valor a cada uno de los casos*/
+          backgroundColor: ["#ff0000", "#F4C79A",],/*Aca damos los colores que usara para cada uno de los casos*/
+          hoverOffset: 4,/*Aca se le da el tamaño de la sombra que tendra al pasar el mouse por encima*/
         },
       ],
     };
     //Cantidad total de tipo de vehiculos en el parqueadero//
     const data3 = {
-      labels: ["Carros", "Motos", "Institucionales"],
+      labels: ["Carros", "Motos", "Institucionales"],/*Un texto para mostrar en las graficas*/
       datasets: [
         {
-          label: "Total de vehiculos",
-          data: [20, 10, 5],
-          backgroundColor: ["#7556F5", "#A4ACF5", "#4BD800"],
-          hoverOffset: 4,
+          label: "Total de vehiculos",/*Un texto para mostrar en las graficas*/
+          data: [20, 10, 5],/*Aca se le da el valor a cada uno de los casos*/
+          backgroundColor: ["#7556F5", "#A4ACF5", "#4BD800"],/*Ingual que lo anterior*/
+          hoverOffset: 4,/*Aca ya podemos entender los script de estas graficas*/
         },
       ],
     };
