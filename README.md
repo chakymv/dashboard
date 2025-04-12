@@ -1,2 +1,2 @@
 # dashboard
-Interface
+Dashboard de parqueadero
