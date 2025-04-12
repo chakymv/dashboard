@@ -1266,27 +1266,16 @@ a.white {
   text-decoration: none;
 }
 
- /* Estilos para el popover */
- .popover {
-  position: absolute;
-  background-color: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  display: none; /* Oculto por defecto */
-  z-index: 1000;
+.textarea_descripcion {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  font-size: 16px;
+  height: 60px;
 }
-.popover h3 {
-  margin: 0;
-  font-size: 18px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-  color: #333;
-}
-.popover ul {
-  list-style: none;
-  padding: 0;
-}
-.popover ul li {
-  margin-bottom: 10px;
+.textarea_descripcion:focus {
+  outline: none;
+  border-color: #0078D4;
+  box-shadow: 0 0 8px rgba(0, 120, 212, 0.2);
 }

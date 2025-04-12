@@ -15,6 +15,7 @@
 
   <body>
     <header>
+
       <div class="sidebar" id="sidebar">
         <div class="logo">
           <img
@@ -135,6 +136,9 @@
     </header>
 
     <main>
+
+      <div class="contenido-principal"> <!-- iNICIA -->
+
       <div class="caja-oscura">
         <div class="columnas">
          <div class="imagen_ingreso imagen_is">
@@ -160,28 +164,25 @@
 
     
 
-    
       </div>
+      </div>
+  
     </main>
 
     <script>
       const sidebar = document.getElementById("sidebar");
-
-      sidebar.addEventListener("mouseenter", () => {
-        sidebar.classList.add("expanded");
-      });
-
-      sidebar.addEventListener("mouseleave", () => {
-        sidebar.classList.remove("expanded");
-      });
-
-      //Iniciar script del navbar
-      const toggle = document.getElementById("navbar-toggle");
-      const menu = document.getElementById("navbar-menu");
-
-      toggle.addEventListener("click", () => {
-        menu.classList.toggle("active");
-      });
-    </script>
+     const contenidoPrincipal = document.querySelector(".contenido-principal");
+     
+     sidebar.addEventListener("mouseenter", () => {
+         sidebar.classList.add("expanded");
+         contenidoPrincipal.style.marginLeft = "250px"; 
+     });
+     
+     sidebar.addEventListener("mouseleave", () => {
+         sidebar.classList.remove("expanded");
+         contenidoPrincipal.style.marginLeft = "50px"; 
+     });
+        
+     </script>
   </body>
 </html>
