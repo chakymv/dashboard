@@ -1279,3 +1279,31 @@ a.white {
   border-color: #0078D4;
   box-shadow: 0 0 8px rgba(0, 120, 212, 0.2);
 }
+
+/* Estilo del popover */
+.popover {
+  position: absolute;
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none; /* Oculto por defecto */
+  z-index: 1000;
+  max-width: 300px;
+}
+.popover h3 {
+  margin: 0;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  color: #333;
+}
+.popover ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+.popover ul li {
+  margin-bottom: 5px;
+}

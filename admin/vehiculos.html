@@ -157,62 +157,53 @@
     
 <!-- Inicia laa Tabla -->
   
-<table>
-<thead>
-<tr>
-<th>ID</th>    
-<th>Placa</th>
-<th>Color</th>
-<th>Tipo</th>
-<th>Marca</th>
-<th>Modelo</th>
-<th>Último ingreso</th>
-<th>Acciones</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>1</th>    
-<td>ABC123</td>
-<td>Rojo</td>
- <td>Automóvil</td>
-<td>Toyota</td>
-<td>Corolla</td>
-<td>2025-04-11 08:30 PM</td>
-<td>
-<button id="abrirModal" class="botones-min btn-editar"><i class="fa-solid fa-pen"></i></button>
-<button class="botones-min btn-eliminar "><i class="fa-solid fa-trash"></i></button>
-</td>
-</tr>
-<tr>
-<td>2</td>
-<td>DEF456</td>
-<td>Azul</td>
-<td>Moto</td>
-<td>Yamaha</td>
-<td>YZF-R3</td>
- <td>2025-04-11 07:45 PM</td>
- <td>
-            
-<button id="abrirModal" class="botones-min btn-editar"><i class="fa-solid fa-pen"></i></button>
-<button class="botones-min btn-eliminar "><i class="fa-solid fa-trash"></i></button>
-</td>
-</tr>
- <tr>
-<td>3</td>    
-<td>GHI789</td>
-<td>Negro</td>
-<td>Camión</td>
-<td>Volvo</td>
- <td>FH16</td>
-<td>2025-04-10 06:15 PM</td>
-<td>
-<button id="abrirModal" class="botones-min btn-editar"><i class="fa-solid fa-pen"></i></button>
-<button class="botones-min btn-eliminar "><i class="fa-solid fa-trash"></i></button>
-</td>
-</tr>
-</tbody>
+<table id="tablaUsuarios">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre y Apellido</th>
+            <th>Teléfono</th>
+            <th>Tipo de Documento</th>
+            <th>Documento</th>
+            <th>Rol</th>
+            <th># de Vehículos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-vehiculos='["ABC123"]'>
+            <td>1</td>
+            <td>Juan Pérez</td>
+            <td>3001234567</td>
+            <td>Cédula</td>
+            <td>123456789</td>
+            <td>Aprendiz</td>
+            <td>1</td>
+        </tr>
+        <tr data-vehiculos='["DEF456"]'>
+            <td>2</td>
+            <td>María López</td>
+            <td>3019876543</td>
+            <td>Pasaporte</td>
+            <td>987654321</td>
+            <td>Empleado</td>
+            <td>1</td>
+        </tr>
+        <tr data-vehiculos='["GHI789"]'>
+            <td>3</td>
+            <td>Carlos Gómez</td>
+            <td>3204567890</td>
+            <td>Cédula Extranjera</td>
+            <td>1122334455</td>
+            <td>Empleado</td>
+            <td>1</td>
+        </tr>
+    </tbody>
 </table>
+
+<div id="popover" class="popover">
+    <h3>Vehiculos</h3>
+    <ul id="listaVehiculos"></ul>
+</div>
 <!-- Termina la tabla de vehiculos -->
     
 </div>
@@ -283,7 +274,7 @@ $(document).ready(function() {
         const valorBusqueda = campoBusqueda.value.toLowerCase();
         const campoFiltrar = criterio.value;
 
-        filas.forEach(fila => {
+        filasUsuarios.forEach(fila => {
             const textoCampo = fila.querySelector(`td:nth-child(${obtenerIndiceColumna(campoFiltrar)})`).textContent.toLowerCase();
             fila.style.display = textoCampo.includes(valorBusqueda) ? '' : 'none';
         });
@@ -296,6 +287,7 @@ $(document).ready(function() {
 
     campoBusqueda.addEventListener('input', filtrarTabla);
 </script>
+
 
 
 <script>
@@ -342,6 +334,9 @@ botonAgregarVehiculo.addEventListener("click", () => {
 });
 
 </script>
+
+
+
 
 <footer>
 </footer>

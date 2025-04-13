@@ -174,7 +174,7 @@
 </div>
 
 
- 
+
     <div class="busqueda-contenedor">
         <select id="criterio">
            <option value="placaVehiculo">Id</option>
@@ -183,6 +183,7 @@
             
             <option value="placaVehiculo">Aprendiz</option>
             <option value="placaVehiculo">Empleado</option>
+            <option value="placaVehiculo">Visitante</option>
             <option value="placaVehiculo">Tercero</option>
         </select>
         <input type="text" id="campoBusqueda" placeholder="Escribe aquí...">
@@ -203,7 +204,7 @@
         </thead>
         <tbody>
          
-            <tr>
+            <tr data-vehiculos='{"placas": ["ABC123"], "tipo": "Automóvil", "marca": "Toyota", "modelo": "Corolla"}'>
               <td>1</td>
                 <td>Juan Pérez</td>
                 <td>3001234567</td>
@@ -230,6 +231,15 @@
                 <td>Empleado</td>
                 <td>1</td>
             </tr>
+            <tr>
+              <td>4</td>
+              <td>Alejandra Garcia</td>
+              <td>3284561234</td>
+              <td>Cédula</td>
+              <td>1122331234</td>
+              <td>Visitante</td>
+              <td>1</td>
+          </tr>
         </tbody>
     </table>
 
@@ -316,6 +326,8 @@ toggle.addEventListener("click", () => {
     campoBusqueda.addEventListener('input', filtrarTabla);
     criterio.addEventListener('change', filtrarTabla);
 </script>
+
+
 
 </body>
 </html>
